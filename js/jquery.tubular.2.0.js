@@ -139,9 +139,11 @@
 		                })
 	            	};
 	            	// load yt iframe js api
+	            	var location_protocal = location.protocol;
+	            	if(location.protocol == "file:") location_protocal = "http:";
                     $('body').append(
                         $('<script>',{
-                            'src': '//www.youtube.com/iframe_api'
+                            'src': location_protocal+'//www.youtube.com/iframe_api'
                         })
                     );
 	            }
